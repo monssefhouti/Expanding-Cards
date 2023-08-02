@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Rubik",sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  width: 90vw;
+  @media (min-width: 600px)and(max-width: 768px) {
+    width: 100vw;
+    }
+  }
+
+.panel {
+  position: relative;
+  flex: 0.1;
+  height: 88vh;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: flex 1s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 3px;
+  @media  (max-width: 768px) {
+      &:nth-of-type(4)
+      {
+        display: none;
+      }
+  }
+  &.active {
+    flex: 0.5;
+    h3 {
+      opacity: 1;
+    }
+  }
+
+  //#region Panels
+  &_panel1 {
+    background-image: url("https://images.unsplash.com/photo-1517265035603-faefa167335b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80");
+  }
+
+  &_panel2 {
+    background-image: url("https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80");
+  }
+
+  &_panel3 {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=873&q=80");
+  }
+
+  &_panel4 {
+    background-image: url("https://images.unsplash.com/photo-1489582341402-cbb1d941dc9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+
+  }
+
+  &_panel5 {
+    background-image: url("https://plus.unsplash.com/premium_photo-1669115101802-4f389b815a44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80");
+  }
+
+  //#endregion
+  &__heading {
+    font-size: 30px;
+    position: absolute;
+    top: 86%;
+    left: 15%;
+    color: white;
+    opacity: 0;
+    @media (min-width: 500px)and(max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+}
+
